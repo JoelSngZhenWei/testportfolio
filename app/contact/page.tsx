@@ -1,17 +1,20 @@
 "use client";
 
 import { useState } from 'react';
+import React, { FormEvent } from 'react';
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
   
     // Send form data to backend API endpoint
@@ -26,8 +29,7 @@ export default function Contact() {
     } else {
       setShowErrorModal(true);
     }
-  };
-  
+  };  
   
 
   const closeModal = () => {
