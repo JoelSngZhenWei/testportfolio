@@ -22,7 +22,7 @@ export default function About() {
       {/* Description */}
       <div className="max-w-2xl text-center">
         <p className="text-lg text-gray-700 dark:text-darkText mb-4">
-          Hi, I'm Joel Sng, a double degree student, fitness enthusiast, dog
+          Hi, Im Joel Sng, a double degree student, fitness enthusiast, dog
           lover, and passionate advocate for community service. I am pursuing a
           double degree in Business Management and Information Systems at 
           Singapore Management University and will be graduating in December
