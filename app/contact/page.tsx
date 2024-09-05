@@ -1,36 +1,62 @@
 "use client";
 
-import { useState } from 'react';
-import React, { FormEvent } from 'react';
-
+import { useState, useRef, useEffect } from "react";
+import React, { FormEvent } from "react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false); // State for loading spinner
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null); // Ref to textarea
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  
+
+  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData({ ...formData, message: e.target.value });
+    autoResizeTextarea();
+  };
+
+  const autoResizeTextarea = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "auto"; // Reset the height
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; // Set the height to the scroll height
+    }
+  };
+
+  useEffect(() => {
+    autoResizeTextarea(); // Initial resize in case there is initial content
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-  
+    setIsLoading(true); // Start loading spinner
+
     // Send form data to backend API endpoint
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
-  
+
+    setIsLoading(false); // Stop loading spinner
+
     if (response.ok) {
       setShowSuccessModal(true);
+      setFormData({ name: "", email: "", subject: "", message: "" }); // Clear fields
     } else {
       setShowErrorModal(true);
     }
-  };  
-  
+  };
 
   const closeModal = () => {
     setShowSuccessModal(false);
@@ -42,78 +68,111 @@ export default function Contact() {
       {/* Contact Me Title */}
       <h1 className="text-center text-4xl font-bold mb-4">Contact Me</h1>
       {/* Email Address */}
-      <p className="text-center text-2xl font-semibold text-highlightRed mb-8">joelsngzw@gmail.com</p>
-      
-      {/* Contact Form */}
-      <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-100 p-8 rounded-lg shadow-md">
-        {/* Name Field */}
-        <div className="mb-6">
-          <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Your Name"
-            required
-          />
-        </div>
+      <p className="text-center text-2xl font-semibold text-highlightRed mb-8">
+        joelsngzw@gmail.com
+      </p>
 
-        {/* Email Field */}
-        <div className="mb-6">
-          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Your Email"
-            required
-          />
+      {/* Contact Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md"
+      >
+        {/* Name and Email Fields */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {/* Name Field */}
+          <div className="relative">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 placeholder-transparent focus:border-red-700 focus:outline-none focus:ring-0"
+              placeholder="Your Name"
+              required
+            />
+            <label
+              htmlFor="name"
+              className="absolute left-0 top-2 text-sm text-highlightRed duration-300 transform -translate-y-4 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >
+              Name
+            </label>
+          </div>
+
+          {/* Email Field */}
+          <div className="relative">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 placeholder-transparent focus:border-red-700 focus:outline-none focus:ring-0"
+              placeholder="Your Email"
+              required
+            />
+            <label
+              htmlFor="email"
+              className="absolute left-0 top-2 text-sm text-highlightRed duration-300 transform -translate-y-4 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >
+              Email
+            </label>
+          </div>
         </div>
 
         {/* Subject Field */}
-        <div className="mb-6">
-          <label htmlFor="subject" className="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+        <div className="relative mb-6">
           <input
             type="text"
             id="subject"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 placeholder-transparent focus:border-red-700 focus:outline-none focus:ring-0"
             placeholder="Subject"
             required
           />
+          <label
+            htmlFor="subject"
+            className="absolute left-0 top-2 text-sm text-highlightRed duration-300 transform -translate-y-4 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+          >
+            Subject
+          </label>
         </div>
-        
+
         {/* Message Field */}
-        <div className="mb-6">
-          <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+        <div className="relative mb-6">
           <textarea
             id="message"
             name="message"
+            ref={textareaRef}
             value={formData.message}
-            onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleTextareaChange}
+            className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 placeholder-transparent focus:border-red-700 focus:outline-none focus:ring-0 overflow-hidden"
             placeholder="Your Message"
-            rows={4}
+            style={{ minHeight: "4rem" }} // Set a reasonable default height
             required
           />
+          <label
+            htmlFor="message"
+            className="absolute left-0 top-2 text-sm text-highlightRed duration-300 transform -translate-y-4 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+          >
+            Message
+          </label>
         </div>
-        
+
         {/* Submit Button */}
         <div className="flex items-center justify-center">
-          <button
-            type="submit"
-            className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600"
-          >
-            Submit
-          </button>
+          {isLoading ? (
+            <div className="loader">Loading...</div> // Replace with your spinner component or design
+          ) : (
+            <button
+              type="submit"
+              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600"
+            >
+              Submit
+            </button>
+          )}
         </div>
       </form>
 
