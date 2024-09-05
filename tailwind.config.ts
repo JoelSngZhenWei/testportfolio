@@ -9,12 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        highlightRed: "#D10000"
+        highlightRed: "#D10000",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        glowHighlight: "0 0 15px #D10000", // Custom shadow for glow effect
       },
     },
   },
