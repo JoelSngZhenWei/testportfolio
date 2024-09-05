@@ -86,7 +86,7 @@ export default function Header() {
                     isActive("/resume") ? "text-highlightRed" : ""
                   }`}
                 >
-                  Resume
+                  Résumé
                 </a>
               </li>
               <li>

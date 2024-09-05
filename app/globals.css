@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0; /* Black text */
+  --background-start-rgb: 255, 255, 255; /* White color */
+  --background-end-rgb: 255, 255, 255; /* White color */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +32,17 @@ body {
   }
 }
 
-/* Hero Card */
+/* Glowing Effect of specialisations on landing page */
+
+/* Class for applying the glow effect */
+.glow-effect {
+  transition: filter 0.5s ease-in-out; /* Smooth transition to full glow over 2 seconds */
+}
+
+/* Hover effect for the glow */
+.glow-effect:hover {
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1)); /* Strong red glow */
+}
 
 
-/* End Hero Card */
+/* End Glowing Effect */

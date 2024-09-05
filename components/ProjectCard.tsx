@@ -16,7 +16,7 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <div className="w-full sm:w-80 lg:w-96 p-4 hover:shadow-glowHighlight transition-shadow duration-300">
+    <div className="w-full p-4 hover:shadow-glowHighlight transition-shadow duration-300 rounded-xl">
       {/* Project Image */}
       <div className="w-full h-56 relative">
         <Image
@@ -36,7 +36,7 @@ export default function ProjectCard({
 
       {/* Project Description */}
       <p className="text-gray-700 text-sm mt-1">
-        {description.length > 150 ? `${description.substring(0, 150)}...` : description}
+        {description.length > 150 ? `${description.substring(0, 200)}...` : description}
       </p>
     </div>
   );
