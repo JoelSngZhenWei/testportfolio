@@ -170,7 +170,7 @@ export default function Contact() {
               type="submit"
               className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600"
             >
-              Submit
+              Submit 
             </button>
           )}
         </div>
