@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // Remove or disable dark mode
+  darkMode: false, // This will disable dark mode completely
+
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,18 +13,13 @@ const config: Config = {
     extend: {
       colors: {
         highlightRed: "#D10000",
-        // Define your dark mode colors here
-        darkBackground: "#1a1a1a", // Example dark background color
-        darkText: "#f0f0f0", // Example dark text color
-        darkHighlight: "#FF4500", // Dark mode highlight color
+        // Remove any dark mode specific colors
       },
       boxShadow: {
-        glowHighlight: "0 0 15px #D10000", // Custom shadow for glow effect in light mode
-        darkGlowHighlight: "0 0 15px #FF4500", // Custom shadow for glow effect in dark mode
+        glowHighlight: "0 0 15px #D10000", // Custom shadow for glow effect
       },
     },
   },
-  darkMode: "media", // Enables dark mode based on user's system preference
   plugins: [],
 };
 
