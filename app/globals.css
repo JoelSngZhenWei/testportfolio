@@ -46,3 +46,33 @@ body {
 
 
 /* End Glowing Effect */
+
+/* Spin effect for navbar */
+@keyframes spin-fast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-fast {
+  animation: spin-fast 0.5s linear; /* Fast spin duration */
+}
+
+.animate-spin-slow {
+  animation: spin-slow 0.5s ease-out; /* Slow down and stop duration */
+}
+
+
+/* End Spin effect */

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen w-full px-6 py-12">
+    <main className="flex flex-col items-center justify-center min-h-screen w-full px-6 ">
       {/* Hero Section */}
       <Hero />
 

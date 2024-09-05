@@ -3,11 +3,11 @@ import Image from "next/image"; // Import the Image component
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-6 py-4 bg-white">
+    <section className="flex flex-col md:flex-row items-center justify-start min-h-screen w-full px-6 bg-white"> {/* Changed justify-center to justify-start and added pt-12 */}
       {/* Left Side - Profile Image with Static Border */}
       <div className="flex justify-center md:w-1/2 mb-4 md:mb-0 md:mr-6">
         {/* Wrapper with Static Border */}
-        <div className="relative w-96 h-96 overflow-hidden border-2 border-black rounded-full mx-auto"> {/* Increased size and centered */}
+        <div className="relative w-96 h-96 overflow-hidden border-2 border-black rounded-full mx-auto">
           {/* Image inside the border */}
           <Image
             src="/Joel.jpg" // Correct path to your image in the public folder

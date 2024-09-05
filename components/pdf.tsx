@@ -1,4 +1,3 @@
-// components/pdf.tsx
 "use client";
 
 export default function PDF() {
@@ -6,7 +5,7 @@ export default function PDF() {
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <iframe
         src="/api/download-pdf" // Use the API route instead of direct file path
-        className="w-full h-[90vh] md:w-3/4 md:h-[90vh] border-0" // Adjusted height
+        className="w-full h-screen max-w-full md:w-3/4 md:h-[90vh] border-0" // Adjusted height and width for responsiveness
         title="Resume PDF"
       />
     </div>
