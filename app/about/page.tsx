@@ -24,7 +24,7 @@ export default function About() {
         <p className="text-lg text-gray-700 dark:text-darkText mb-4">
           Hi, I'm Joel Sng, a double degree student, fitness enthusiast, dog
           lover, and passionate advocate for community service. I am pursuing a
-          double degree in Business Management and Information Systems at
+          double degree in Business Management and Information Systems at 
           Singapore Management University and will be graduating in December
           2025.
         </p>
