@@ -2,11 +2,8 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // Enable static HTML export for GitHub Pages
-    basePath: '/your-repo-name', // Replace 'your-repo-name' with your GitHub repository name
-    images: {
-      unoptimized: true, // Disable server-side image optimization
-    },
+    reactStrictMode: true, // Enable React strict mode for better error handling and debugging
+    swcMinify: true,       // Enable SWC-based minification for faster builds
   };
   
   // Use ES module syntax to export the config
