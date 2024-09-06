@@ -2,77 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0; /* Black text */
-  --background-start-rgb: 255, 255, 255; /* White color */
-  --background-end-rgb: 255, 255, 255; /* White color */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Apply text and background color with gradient */
 body {
+  @apply transition-colors duration-500 ease-in-out;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+      to right, /* Change direction as needed */
+      rgba(var(--transition-color), 0) var(--transition-direction),
+      rgba(var(--background-end-rgb), 1) 100%
+    ),
     rgb(var(--background-start-rgb));
+  transition: background 1s ease, color 1s ease;
 }
 
+/* Utility class for text balance */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* Glowing Effect of specialisations on landing page */
-
-/* Class for applying the glow effect */
+/* Glow Effect for Specializations */
 .glow-effect {
-  transition: filter 0.5s ease-in-out; /* Smooth transition to full glow over 2 seconds */
+  transition: filter 0.5s ease-in-out; /* Smooth transition */
 }
 
-/* Hover effect for the glow */
 .glow-effect:hover {
   filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1)); /* Strong red glow */
 }
 
+/* Spin Effects for Navbar */
+@keyframes spin-accelerate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg); /* Full rotation at halfway */
+  }
+  100% {
+    transform: rotate(720deg); /* Double rotation at the end */
+  }
+}
 
-/* End Glowing Effect */
-
-/* Spin effect for navbar */
-@keyframes spin-fast {
+@keyframes spin-decelerate {
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Slower rotation */
   }
 }
 
-@keyframes spin-slow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.animate-spin-accelerate {
+  animation: spin-accelerate 0.5s ease-in;
 }
 
-.animate-spin-fast {
-  animation: spin-fast 0.5s linear; /* Fast spin duration */
+.animate-spin-decelerate {
+  animation: spin-decelerate 0.5s ease-out;
 }
-
-.animate-spin-slow {
-  animation: spin-slow 0.5s ease-out; /* Slow down and stop duration */
-}
-
-
-/* End Spin effect */

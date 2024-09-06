@@ -6,10 +6,11 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Enables dark mode using the 'class' strategy
   theme: {
     extend: {
       colors: {
-        highlightRed: "#D10000",
+        highlightRed: "#D10000", // Custom color for highlighting elements
       },
       boxShadow: {
         glowHighlight: "0 0 15px #D10000", // Custom shadow for glow effect
@@ -18,4 +19,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
