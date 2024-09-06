@@ -17,7 +17,7 @@ export function Hero() {
           className="opacity-10"
         />
       </div>
-      <div className="z-10 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4 py-8">
+      <div className="z-10 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4 py-4">
         <div className="relative md:w-1/2 mb-8 md:mb-0">
           <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
             <Image
