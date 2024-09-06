@@ -5,15 +5,15 @@ import SpecialisationCard from "@/components/SpecialisationCard";
 export default function Specialisations() {
   const specialisations = [
     {
-      imageSrc: "/datavisualisation.png", // Path to your icon in the public folder
+      imageSrc: "/datavisualisation.svg", // Updated to SVG
       title: "Data Visualisation",
     },
     {
-      imageSrc: "/machinelearning.png",
+      imageSrc: "/machinelearning.svg", // Updated to SVG
       title: "Machine Learning",
     },
     {
-      imageSrc: "/softwareengineering.png",
+      imageSrc: "/softwareengineering.svg", // Updated to SVG
       title: "Software Engineering",
     },
   ];

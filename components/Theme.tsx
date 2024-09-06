@@ -1,8 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-// Define the prop types
 interface ThemeProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
@@ -12,38 +11,33 @@ export default function Theme({ isDarkMode, toggleDarkMode }: ThemeProps) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleDarkModeToggle = () => {
-    setIsAnimating(true); // Start the acceleration animation
-
-    // Change the theme at the midpoint of the spin animation (250ms)
+    setIsAnimating(true);
     setTimeout(() => {
       toggleDarkMode();
-    }, 250); // Midpoint of the 500ms animation
-
-    // Stop the spinning animation after it completes
+    }, 250);
     setTimeout(() => {
       setIsAnimating(false);
-    }, 500); // Total duration of 500ms for the animation
+    }, 500);
   };
 
   return (
     <button
       onClick={handleDarkModeToggle}
-      className="flex items-center p-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      className="flex items-center p-2 rounded-lg transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+      aria-label="Toggle dark mode"
     >
-      <span className="sr-only">Toggle dark mode</span>
       <div
-        className={`transition-transform ${
-          isAnimating ? "animate-spin-accelerate" : ""
+        className={`transition-transform duration-500 ${
+          isAnimating ? 'animate-spin' : ''
         }`}
       >
         {isDarkMode ? (
           <svg
-            className="w-6 h-6"
+            className="w-6 h-6 text-yellow-500"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            {/* Moon Icon */}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -53,12 +47,11 @@ export default function Theme({ isDarkMode, toggleDarkMode }: ThemeProps) {
           </svg>
         ) : (
           <svg
-            className="w-6 h-6"
+            className="w-6 h-6 text-gray-800"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            {/* Sun Icon */}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

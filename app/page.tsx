@@ -4,7 +4,9 @@ import LineDivider from "@/components/LineDivider";
 import Specialisations from "@/components/Specialisations";
 import Link from "next/link";
 import Image from "next/image";
-import ParticlesBackground from "@/components/ParticlesBackground"; // Import your particles background component
+import ParticlesBackground from "@/components/ParticlesBackground";
+import { Hero } from "@/components/hero";
+import { ReadMoreButton } from "@/components/read-more-button";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -16,45 +18,12 @@ export default function Home() {
 
   return (
     <main className="relative flex flex-col items-center justify-center min-h-screen w-full px-6 overflow-hidden bg-white dark:bg-black transition-colors duration-500">
-      {/* Dark Mode Toggle Button */}
-      <button
-        onClick={handleDarkModeToggle}
-        className="fixed top-4 right-4 bg-gray-200 dark:bg-gray-800 text-black dark:text-white p-2"
-      >
-        Toggle Dark Mode
-      </button>
 
       {/* Particles Background */}
       <ParticlesBackground />
 
       {/* Hero Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-start min-h-screen w-full px-6 text-black dark:text-white transition-colors duration-500">
-        {/* Left Side - Profile Image with Circular Border */}
-        <div className="flex justify-center md:w-1/2 mb-4 md:mb-0 md:mr-6 pointer-events-auto">
-          <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] overflow-hidden border-2 border-black dark:border-white rounded-full mx-auto">
-            <Image
-              src="/Joel.jpg"
-              alt="Joel Sng"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Right Side - Text Content with Blurred Background */}
-        <div className="relative z-10 md:w-1/2 bg-white/20 dark:bg-black/20 backdrop-blur-md p-6 pointer-events-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-2 inline-block relative">
-            Joel Sng
-            <span className="absolute left-0 w-full h-1 bg-red-600 -bottom-3"></span>
-          </h1>
-          <p className="text-lg mt-4 mb-2">
-            Hello! I am an aspiring data professional with experience in machine
-            learning and data visualization.
-          </p>
-          <p className="text-lg">I will be graduating in December 2025.</p>
-        </div>
-      </section>
+      <Hero />
 
       {/* Line Divider for Specialisations */}
       <LineDivider text="Specialisations" />
@@ -69,7 +38,7 @@ export default function Home() {
       <section className="w-full max-w-screen-lg px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Column - Text */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-highlightRed text-3xl font-bold mb-2 dark:text-white">
+          <h2 className=" text-3xl font-bold mb-2 text-black dark:text-white">
             Neural Activity Visualisation with PCA
           </h2>
           <p className="text-gray-700 text-xl dark:text-gray-300">
@@ -78,9 +47,7 @@ export default function Home() {
             venenatis, non viverra massa suscipit...
           </p>
           <Link href="/projects/project1">
-            <button className="mt-4 px-4 py-2 bg-highlightRed text-white font-bold hover:bg-red-700 dark:hover:bg-red-500 transition duration-300">
-              Read More
-            </button>
+            <ReadMoreButton />
           </Link>
         </div>
 
@@ -118,7 +85,7 @@ export default function Home() {
 
         {/* Right Column - Text */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-highlightRed text-3xl font-bold mb-2 dark:text-white">
+          <h2 className=" text-3xl font-bold mb-2 text-black dark:text-white">
             Joel Sng
           </h2>
           <p className="text-gray-700 text-xl dark:text-gray-300">
@@ -126,9 +93,7 @@ export default function Home() {
             service advocate. I am adding more text here to pad this out. Hello!
           </p>
           <Link href="/about">
-            <button className="mt-4 px-4 py-2 bg-highlightRed text-white font-bold hover:bg-red-700 dark:hover:bg-red-500 transition duration-300">
-              Read More
-            </button>
+            <ReadMoreButton />
           </Link>
         </div>
       </section>

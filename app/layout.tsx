@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header"; // Adjust path as necessary
+import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/ThemeContext"; // Import ThemeProvider from your context
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* Wrap your application with ThemeProvider */}
         <ThemeProvider>
-          <Header />
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

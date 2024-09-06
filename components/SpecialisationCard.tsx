@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 interface SpecialisationCardProps {
-  imageSrc: string;
+  imageSrc: string; // SVG image path
   title: string;
 }
 
@@ -20,12 +20,12 @@ export default function SpecialisationCard({
           alt={title}
           layout="fill"
           objectFit="contain"
-          className="glow-effect" // Apply the glow effect class
+          className="glow-effect text-gray-800 dark:text-white" // Apply the glow effect class and color adjustments
         />
       </div>
 
       {/* Specialisation Title */}
-      <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{title}</h3>
     </div>
   );
 }
