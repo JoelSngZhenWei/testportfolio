@@ -51,7 +51,7 @@ export function AboutMe() {
                   <li>Visualisation of structured data</li>
                   <li>Analysis of unstructured text data</li>
                   <li>Data mining using RPA and OCR</li>
-                  <li>Applied machine learning to investigate suspcious customers</li>
+                  <li>Applied machine learning to investigate suspicious customers</li>
                 </ul>
               </div>
               <div>
@@ -71,7 +71,7 @@ export function AboutMe() {
             </h2>
             <ul className="list-disc list-inside mt-2 space-y-1">
               <li>President of the Special Interest and Community Service Sodality</li>
-              <li>President of StarringSMU'22</li>
+              <li>President of StarringSMU22</li>
               <li>Active in climbing, Muay Thai, and canoeing</li>
             </ul>
           </section>
