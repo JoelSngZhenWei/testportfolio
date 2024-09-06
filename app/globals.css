@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define color variables for your theme */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+  --transition-color: 0, 0, 0;
+  --highlight-red: 220, 38, 38; /* Update with your highlightRed color */
+}
+
+/* Dark theme colors */
+:root.dark {
+  --foreground-rgb: 209, 213, 219; /* Light gray text */
+  --background-start-rgb: 0, 0, 0; /* Black background */
+  --background-end-rgb: 26, 26, 26; /* Slightly lighter black */
+}
+
 /* Apply text and background color with gradient */
 body {
   @apply transition-colors duration-500 ease-in-out;
@@ -60,3 +76,14 @@ body {
 .animate-spin-decelerate {
   animation: spin-decelerate 0.5s ease-out;
 }
+
+/* Navbar Dark Mode Styling */
+nav.dark {
+  background-color: rgb(var(--background-start-rgb)); /* Black background */
+  color: rgb(var(--foreground-rgb)); /* Grey font */
+}
+
+nav a:hover {
+  color: rgb(var(--highlight-red)); /* HighlightRed for hovered text */
+}
+

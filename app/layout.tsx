@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from '@/components/Header'
-
+import Header from "@/components/Header"; // Adjust path as necessary
+import { ThemeProvider } from "@/contexts/ThemeContext"; // Import ThemeProvider from your context
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +16,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (    
+  return (
     <html lang="en">
+      <head>
+        {/* Inline script to apply the initial theme based on local storage */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var isDarkMode = localStorage.getItem('darkMode') === 'true';
+                  if (isDarkMode) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <Header />
-        {children}
+        {/* Wrap your application with ThemeProvider */}
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

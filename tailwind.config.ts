@@ -12,9 +12,6 @@ const config: Config = {
       colors: {
         highlightRed: "#D10000", // Custom color for highlighting elements
       },
-      boxShadow: {
-        glowHighlight: "0 0 15px #D10000", // Custom shadow for glow effect
-      },
     },
   },
   plugins: [],

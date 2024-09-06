@@ -16,7 +16,7 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <div className="w-full p-4 hover:shadow-glowHighlight transition-shadow duration-300 rounded-xl">
+    <div className="w-full p-4 transition-shadow duration-300 rounded-xl hover:outline-glowHighlight dark:hover:outline-whiteGlow">
       {/* Project Image */}
       <div className="w-full h-56 relative">
         <Image
@@ -29,14 +29,18 @@ export default function ProjectCard({
       </div>
 
       {/* Project Date */}
-      <p className="text-gray-500 text-sm mt-2">{date}</p>
+      <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{date}</p>
 
       {/* Project Title */}
-      <h3 className="text-black font-bold text-xl mt-1">{title}</h3>
+      <h3 className="text-black dark:text-white font-bold text-xl mt-1">
+        {title}
+      </h3>
 
       {/* Project Description */}
-      <p className="text-gray-700 text-sm mt-1">
-        {description.length > 150 ? `${description.substring(0, 200)}...` : description}
+      <p className="text-gray-700 dark:text-gray-300 text-sm mt-1">
+        {description.length > 150
+          ? `${description.substring(0, 200)}...`
+          : description}
       </p>
     </div>
   );

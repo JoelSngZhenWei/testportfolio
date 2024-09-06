@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 px-6 py-12">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black px-6 py-12 transition-colors duration-500">
       {/* Header */}
       <h1 className="text-4xl font-bold mb-6 text-center text-black dark:text-white">
         About Me

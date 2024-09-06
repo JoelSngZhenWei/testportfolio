@@ -63,20 +63,20 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-white px-4 sm:px-8 py-12 dark:bg-gray-900">
+    <div className="flex flex-col items-center min-h-screen bg-white px-4 sm:px-8 py-12 dark:bg-black transition-colors duration-500 ease-in-out">
       {/* Contact Me Title */}
       <h1 className="text-center text-4xl font-bold mb-4 text-black dark:text-white">
         Contact Me
       </h1>
       {/* Email Address */}
-      <p className="text-center text-2xl font-semibold text-highlightRed dark:text-red-400 mb-8">
+      <p className="text-center text-2xl font-semibold text-highlightRed dark:text-highlightRed mb-8">
         joelsngzw@gmail.com
       </p>
 
       {/* Contact Form */}
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md dark:shadow-lg"
+        className="w-full max-w-2xl bg-white dark:bg-black p-8 rounded-lg shadow-md dark:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition-colors duration-500 ease-in-out"
       >
         {/* Name and Email Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -88,13 +88,13 @@ export default function Contact() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-red-500 focus:outline-none focus:ring-0"
+              className="peer block w-full appearance-none border-0 border-b-2 border-red-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-white focus:outline-none focus:ring-0 transition-colors duration-500 ease-in-out"
               placeholder="Your Name"
               required
             />
             <label
               htmlFor="name"
-              className="absolute left-0 top-0 text-sm text-highlightRed dark:text-red-400 duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="absolute left-0 top-0 text-sm text-highlightRed dark:text-white duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Name
             </label>
@@ -108,13 +108,13 @@ export default function Contact() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-red-500 focus:outline-none focus:ring-0"
+              className="peer block w-full appearance-none border-0 border-b-2 border-red-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-white focus:outline-none focus:ring-0 transition-colors duration-500 ease-in-out"
               placeholder="Your Email"
               required
             />
             <label
               htmlFor="email"
-              className="absolute left-0 top-0 text-sm text-highlightRed dark:text-red-400 duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="absolute left-0 top-0 text-sm text-highlightRed dark:text-white duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email
             </label>
@@ -129,13 +129,13 @@ export default function Contact() {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-red-500 focus:outline-none focus:ring-0"
+            className="peer block w-full appearance-none border-0 border-b-2 border-red-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-white focus:outline-none focus:ring-0 transition-colors duration-500 ease-in-out"
             placeholder="Subject"
             required
           />
           <label
             htmlFor="subject"
-            className="absolute left-0 top-0 text-sm text-highlightRed dark:text-red-400 duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="absolute left-0 top-0 text-sm text-highlightRed dark:text-white duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Subject
           </label>
@@ -149,14 +149,14 @@ export default function Contact() {
             ref={textareaRef}
             value={formData.message}
             onChange={handleTextareaChange}
-            className="peer block w-full appearance-none border-0 border-b-2 border-red-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-red-500 focus:outline-none focus:ring-0 overflow-hidden"
+            className="peer block w-full appearance-none border-0 border-b-2 border-red-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-white placeholder-transparent focus:border-red-700 dark:focus:border-white focus:outline-none focus:ring-0 overflow-hidden transition-colors duration-500 ease-in-out"
             placeholder="Your Message"
             style={{ minHeight: "4rem" }}
             required
           />
           <label
             htmlFor="message"
-            className="absolute left-0 top-0 text-sm text-highlightRed dark:text-red-400 duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="absolute left-0 top-0 text-sm text-highlightRed dark:text-white duration-300 transform -translate-y-6 scale-75 origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Message
           </label>
@@ -169,7 +169,7 @@ export default function Contact() {
           ) : (
             <button
               type="submit"
-              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 dark:hover:bg-red-400"
+              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-highlightRed dark:hover:bg-red-400 transition-colors duration-500 ease-in-out"
             >
               Submit
             </button>
@@ -180,13 +180,13 @@ export default function Contact() {
       {/* Success Modal */}
       {showSuccessModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-colors duration-500 ease-in-out">
             <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
               Email Sent Successfully!
             </h2>
             <button
               onClick={closeModal}
-              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500"
+              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 transition-colors duration-500 ease-in-out"
             >
               Close
             </button>
@@ -197,13 +197,13 @@ export default function Contact() {
       {/* Error Modal */}
       {showErrorModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-colors duration-500 ease-in-out">
             <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
               Failed to Send Email.
             </h2>
             <button
               onClick={closeModal}
-              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500"
+              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 transition-colors duration-500 ease-in-out"
             >
               Close
             </button>

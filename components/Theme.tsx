@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 
-export default function Theme() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+// Define the prop types
+interface ThemeProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+export default function Theme({ isDarkMode, toggleDarkMode }: ThemeProps) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleDarkModeToggle = () => {
@@ -11,8 +16,7 @@ export default function Theme() {
 
     // Change the theme at the midpoint of the spin animation (250ms)
     setTimeout(() => {
-      setIsDarkMode((prevMode) => !prevMode);
-      document.documentElement.classList.toggle("dark", !isDarkMode);
+      toggleDarkMode();
     }, 250); // Midpoint of the 500ms animation
 
     // Stop the spinning animation after it completes

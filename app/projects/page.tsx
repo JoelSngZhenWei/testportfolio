@@ -1,4 +1,3 @@
-// app/projects/page.tsx
 "use client";
 import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
@@ -32,8 +31,10 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen py-12 bg-white">
-      <h1 className="text-center text-4xl font-bold mb-10">Projects</h1>
+    <div className="min-h-screen py-12 bg-white dark:bg-black transition-colors duration-500">
+      <h1 className="text-center text-4xl font-bold mb-10 text-black dark:text-white transition-colors duration-500">
+        Projects
+      </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 px-4">
         {projects.map((project, index) => (
