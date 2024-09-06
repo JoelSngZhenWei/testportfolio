@@ -9,13 +9,6 @@ export function HeroCard() {
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/placeholder.svg?height=1080&width=1920"
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-10"
-        />
       </div>
       <div className="z-10 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4 py-4">
         <div className="relative md:w-1/2 mb-8 md:mb-0">

@@ -1,6 +1,6 @@
 "use client";
-import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
+import { ProjectsPage } from "@/components/projects-page";
 
 export default function Projects() {
   const projects = [
@@ -32,22 +32,8 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen py-12 bg-white dark:bg-black transition-colors duration-500">
-      <h1 className="text-center text-4xl font-bold mb-10 text-black dark:text-white transition-colors duration-500">
-        Projects
-      </h1>
+      <ProjectsPage/>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 px-4">
-        {projects.map((project, index) => (
-          <Link href={project.link} key={index}>
-            <ProjectCard
-              imageSrc={project.imageSrc}
-              date={project.date}
-              title={project.title}
-              description={project.description}
-            />
-          </Link>
-        ))}
-      </div>
     </div>
   );
 }

@@ -82,8 +82,8 @@ export function EmailForm() {
     <div className="w-full max-w-lg mx-auto">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">Send Email</CardTitle>
-          <CardDescription className="text-center">Fill out the form below to send us an email.</CardDescription>
+          <CardTitle className="text-2xl font-bold text-center">Contact Me</CardTitle>
+          <CardDescription className="text-center font-bold" style={{ color: '#D10000' }}>joelsngzw@gmail.com</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -152,12 +152,12 @@ export function EmailForm() {
             <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
               Email Sent Successfully!
             </h2>
-            <button
+            <Button
               onClick={closeModal}
               className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 transition-colors duration-500 ease-in-out"
             >
               Close
-            </button>
+            </Button>
           </div>
         </div>
       )}
@@ -169,12 +169,12 @@ export function EmailForm() {
             <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
               Failed to Send Email.
             </h2>
-            <button
+            <Button
               onClick={closeModal}
               className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 transition-colors duration-500 ease-in-out"
             >
               Close
-            </button>
+            </Button>
           </div>
         </div>
       )}
