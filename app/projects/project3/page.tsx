@@ -15,7 +15,7 @@ export default function Project3() {
           </div>
           <div className="relative aspect-video md:aspect-square rounded-lg overflow-hidden">
             <Image
-              src="/loki1.jpg"
+              src="/loki.jpg"
               alt="hello"
               fill
               className="object-cover"
@@ -83,7 +83,7 @@ export default function Project3() {
             <div className="relative w-full md:w-1/2 max-w-[50%]">
               <div className="relative w-full h-full max-h-[calc(100vh-6rem)]">
                 <Image
-                  src="/loki1.jpg"
+                  src="/loki.jpg"
                   alt="Description photo"
                   fill
                   className="object-cover rounded-lg"
@@ -96,7 +96,7 @@ export default function Project3() {
           <div className="text-center mb-16">
             <div className="relative inline-block w-full max-w-2xl">
               <Image
-                src="/loki1.jpg"
+                src="/loki.jpg"
                 alt="Centered photo"
                 width={800}
                 height={600}
