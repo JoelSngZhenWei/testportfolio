@@ -91,7 +91,7 @@ export default function Home() {
           </h2>
           <p className="text-gray-700 text-xl dark:text-gray-300">
             Double degree student, fitness junkie, dog owner, and community
-            service advocate. I am adding more text here to pad this out. Hello!
+            service advocate. I am adding more text here to pad this out. Hello there!
           </p>
           <Link href="/about">
             <ReadMoreButton />
