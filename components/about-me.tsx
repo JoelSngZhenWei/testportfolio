@@ -25,7 +25,7 @@ export function AboutMe() {
             <h2 className="text-2xl font-semibold flex items-center mb-2">
               <GraduationCap className="mr-2" /> Educational Background
             </h2>
-            <p>I'm currently pursuing a Double Degree at Singapore Management University:</p>
+            <p>I am currently pursuing a Double Degree at Singapore Management University:</p>
             <ul className="list-disc list-inside mt-2 space-y-1">
               <li>Information Systems (Analytics Major)</li>
               <li>Business Management (Operations Major)</li>
@@ -87,8 +87,8 @@ export function AboutMe() {
               <Badge>Community Service</Badge>
             </div>
             <p>
-              I'm a fitness junkie who enjoys gymming and staying active. As a foodie, I love exploring Singapore for
-              delicious and affordable eats. In my downtime, you can find me playing games like Smash Bros. I'm also
+              I am a fitness junkie who enjoys gymming and staying active. As a foodie, I love exploring Singapore for
+              delicious and affordable eats. In my downtime, you can find me playing games like Smash Bros. I am also
               passionate about community service and have held leadership roles in various organizations.
             </p>
           </section>
@@ -105,7 +105,7 @@ export function AboutMe() {
               <div>
                 <h3 className="text-xl font-semibold">Loki</h3>
                 <p>
-                  Meet Loki, my loyal husky! He's my study buddy and stress-reliever. Loki enjoys soaking up the air
+                  Meet Loki, my loyal husky! He is my study buddy and stress-reliever. Loki enjoys soaking up the air
                   conditioning while I work and always refuses to go home, even after long walks.
                 </p>
               </div>
