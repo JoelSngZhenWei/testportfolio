@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useTheme } from "@/contexts/ThemeContext" // Import the useTheme hook
 
-export function Hero() {
+export function HeroCard() {
   const { isDarkMode } = useTheme(); // Access the dark mode state
 
   return (

@@ -5,7 +5,7 @@ import Specialisations from "@/components/Specialisations";
 import Link from "next/link";
 import Image from "next/image";
 import ParticlesBackground from "@/components/ParticlesBackground";
-import { Hero } from "@/components/hero";
+import { HeroCard } from "@/components/HeroCard";
 import { ReadMoreButton } from "@/components/read-more-button";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
       <ParticlesBackground />
 
       {/* Hero Section */}
-      <Hero />
+      <HeroCard />
 
       {/* Line Divider for Specialisations */}
       <LineDivider text="Specialisations" />
