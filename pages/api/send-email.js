@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       from: email,
       to: 'joelsngzw@gmail.com',
       subject: `${subject} - Message from ${name}`,
-      text: `You have received a new message from ${name} (${email}):\n\n${message}`, // Include the sender's email in the message
+      text: `You have received a new message via your portfolio website.\nFrom: ${name} (\nEmail: ${email}):\n\n${message}`,
     };
 
     try {
