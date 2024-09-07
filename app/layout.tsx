@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
-import { ThemeProvider } from "@/contexts/ThemeContext"; // Import ThemeProvider from your context
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
       <head>
+        <link rel="preload" href="/particles.min.js" as="script"></link>
         {/* Inline script to apply the initial theme based on local storage */}
         <script
           dangerouslySetInnerHTML={{
@@ -43,6 +46,10 @@ export default function RootLayout({
           <Navbar />
           {children}
         </ThemeProvider>
+      
+        <div className="hidden">
+          <ParticlesBackground />
+        </div>
       </body>
     </html>
   );

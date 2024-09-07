@@ -20,7 +20,6 @@ export default function Home() {
     <main className="relative flex flex-col items-center justify-center min-h-screen w-full px-6 overflow-hidden bg-white dark:bg-black transition-colors duration-500">
 
       {/* Particles Background */}
-      
       <ParticlesBackground />
 
       {/* Hero Section */}
@@ -47,9 +46,11 @@ export default function Home() {
             lacus a sapien blandit viverra. Integer faucibus libero vitae nulla
             venenatis, non viverra massa suscipit...
           </p>
-          <Link href="/projects/project1">
-            <ReadMoreButton />
-          </Link>
+          <div className="flex justify-end">
+            <Link href="/projects/project1">
+              <ReadMoreButton />
+            </Link>
+          </div>
         </div>
 
         {/* Right Column - Image */}
@@ -93,9 +94,11 @@ export default function Home() {
             Double degree student, fitness junkie, dog owner, and community
             service advocate. I am adding more text here to pad this out. Hello there!
           </p>
-          <Link href="/about">
-            <ReadMoreButton />
-          </Link>
+          <div className="flex justify-end">
+            <Link href="/about">
+              <ReadMoreButton />
+            </Link>
+          </div>
         </div>
       </section>
     </main>

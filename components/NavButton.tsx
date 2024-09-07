@@ -14,7 +14,7 @@ export default function NavButton({ href, label }: NavButtonProps) {
   return (
     <a
       href={href}
-      className={`block py-2 pr-4 pl-3 hover:bg-gray-100 dark:hover:bg-gray-700 
+      className={`block py-2 pr-4 pl-3 
         ${isActive ? "text-highlightRed font-semibold" : "text-gray-500 dark:text-gray-400"}`}
     >
       {label}

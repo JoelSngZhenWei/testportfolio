@@ -9,7 +9,7 @@ import LineDivider from "./LineDivider"
 export function AboutMe() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <Card className="max-w-4xl mx-auto">
+      <Card className="max-w-5xl mx-auto">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
             <Avatar className="w-32 h-32">
@@ -99,7 +99,7 @@ export function AboutMe() {
             </h2>
             <div className="flex items-center space-x-4">
               <Avatar className="w-24 h-24">
-                <AvatarImage src="/loki1.JPG" alt="Loki" />
+                <AvatarImage src="/loki.jpg" alt="Loki" />
                 <AvatarFallback>Loki</AvatarFallback>
               </Avatar>
               <div>

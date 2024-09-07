@@ -1,11 +1,22 @@
 import React from 'react'
 import { EmailForm } from "@/components/email-form"
+import ParticlesBackground from "@/components/ParticlesBackground"
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-white px-4 sm:px-8 py-12 dark:bg-black transition-colors duration-500 ease-in-out">
-      {/* Contact Me Title */}
-      <EmailForm />
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black transition-colors duration-500 ease-in-out overflow-hidden">
+      {/* Particles Background */}
+      <div className="absolute inset-0">
+        <ParticlesBackground />
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 w-full max-w-xl px-4 sm:px-8 py-12">
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">
+          Contact Me
+        </h1>
+        <EmailForm />
+      </div>
     </div>
   )
 }

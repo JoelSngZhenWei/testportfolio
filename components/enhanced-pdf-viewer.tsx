@@ -19,7 +19,7 @@ export function EnhancedPdfViewer() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Card className="w-full max-w-4xl shadow-lg">
+      <Card className="w-full max-w-6xl shadow-lg">
         {/* <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-2xl font-bold">Resume</CardTitle>
           <Button variant="outline" size="icon" onClick={handleDownload}>

@@ -21,7 +21,7 @@ const ParticlesBackground: React.FC = () => {
     <>
       {/* Load the necessary scripts */}
       <Script
-        src="/demo/js/lib/particles.js"
+        src="/particles.min.js"
         strategy="beforeInteractive"
         onLoad={() => {
           console.log('particles.js loaded');

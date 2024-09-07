@@ -1,16 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Theme from "@/components/Theme";
 import NavButton from "@/components/NavButton";
+import { usePathname } from 'next/navigation';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { name: 'About', href: '/about' },
@@ -24,18 +26,23 @@ export function Navbar() {
     document.documentElement.classList.toggle('dark', !isDarkMode);
   };
 
+  useEffect(() => {
+    // Close the menu whenever the pathname changes
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <nav className="bg-background border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-10">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary">
+            <Link href="/" className="text-xl font-bold text-primary">
               JOEL SNG
             </Link>
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-4 overflow-hidden">
+          <div className="hidden md:flex items-center space-x-4 overflow-hidden text-sm">
             {navItems.map((item) => (
               <NavButton
                 key={item.name}
@@ -47,9 +54,9 @@ export function Navbar() {
 
           {/* Mobile menu */}
           <div className="md:hidden flex items-center">
-            <Sheet>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" onClick={() => setIsOpen(true)}>
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
                 </Button>
@@ -61,7 +68,6 @@ export function Navbar() {
                       key={item.name}
                       href={item.href}
                       className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
-                      onClick={() => setIsOpen(false)}
                     >
                       {item.name}
                     </Link>

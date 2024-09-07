@@ -80,7 +80,7 @@ export function EmailForm() {
 
   return (
     <div className="w-full max-w-lg mx-auto">
-      <Card>
+      <Card className="bg-white dark:bg-white">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">Contact Me</CardTitle>
           <CardDescription className="text-center font-bold" style={{ color: '#D10000' }}>joelsngzw@gmail.com</CardDescription>
