@@ -61,7 +61,7 @@ export default function Home() {
               alt="Featured Project"
               layout="fill"
               objectFit="cover"
-              className="cursor-pointer"
+              className="cursor-pointer rounded-lg"
             />
           </Link>
         </div>
@@ -80,7 +80,7 @@ export default function Home() {
               alt="More About Me"
               layout="fill"
               objectFit="cover"
-              className="cursor-pointer"
+              className="cursor-pointer rounded-lg"
             />
           </Link>
         </div>
