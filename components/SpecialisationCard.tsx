@@ -7,13 +7,11 @@ import { motion } from "framer-motion"
 interface SpecialisationCardProps {
   imageSrc: string
   title: string
-  description: string
 }
 
 export default function SpecialisationCard({
   imageSrc,
-  title,
-  description,
+  title
 }: SpecialisationCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
@@ -35,7 +33,6 @@ export default function SpecialisationCard({
       </div>
 
       <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{title}</h3>
-      <p className="text-sm text-gray-600 dark:text-gray-300 text-center">{description}</p>
     </motion.div>
   )
 }
