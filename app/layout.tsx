@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
+
     <html lang="en">
       <head>
         <link rel="preload" href="/particles.min.js" as="script"></link>
@@ -41,15 +42,17 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+
         {/* Wrap your application with ThemeProvider */}
         <ThemeProvider>
           <Navbar />
           {children}
         </ThemeProvider>
-      
+
         <div className="hidden">
           <ParticlesBackground />
         </div>
+
       </body>
     </html>
   );

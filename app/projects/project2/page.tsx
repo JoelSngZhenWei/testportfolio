@@ -2,37 +2,43 @@
 
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { TechStackItem } from "@/components/components-tech-stack-item"
+// import { TechStackItem } from "@/components/components-tech-stack-item"
+import { TechStackItem } from "@/components/tech-stack-item"
 
 export default function Project3() {
   const techStack = [
-    { 
-      src: "/techstack/nextjs.png", 
+    {
+      src: "/techstack/nextjs.svg",
       alt: "Next.js",
-      reason: "Used for server-side rendering and optimized performance."
+      reason: "Used for server-side rendering and optimized performance.",
+      longReason: "A step up from React.js. An advanced application development framework that allows for advanced features such as static site rendering, incremental static regeneration, and Vercel integration for easy deployment."
     },
-    { 
-      src: "/techstack/reactjs.png", 
+    {
+      src: "/techstack/reactjs.png",
       alt: "React.js",
-      reason: "Chosen for its component-based architecture and efficient UI updates."
+      reason: "Chosen for its component-based architecture and efficient UI updates.",
+      longReason: "At this point I have had preliminary experience with the React.js framework. Helps greatly for component based architecture and efficiency in application development."
     },
-    { 
-      src: "/techstack/tailwindcss.png", 
+    {
+      src: "/techstack/tailwindcss.png",
       alt: "Tailwind CSS",
-      reason: "Utilized for rapid UI development and consistent styling."
+      reason: "Utilized for rapid UI development and consistent styling.",
+      longReason: "Very advanced capabilities for responsive component design. Greatly streamlined my frontend development."
     },
-    { 
-      src: "/techstack/vercel.png", 
+    {
+      src: "/techstack/vercel.svg",
       alt: "Vercel",
-      reason: "Selected for seamless deployment and excellent Next.js integration."
+      reason: "Selected for seamless deployment and excellent Next.js integration.",
+      longReason: "My first time using Vercel. Convenient and unparalleled deployment and Next.js integration. It made deploying my application a breeze."
     },
-    { 
-      src: "/techstack/html5.png", 
+    {
+      src: "/techstack/html5.png",
       alt: "HTML5",
-      reason: "Used as the foundation for structuring web content."
+      reason: "Used as the foundation for structuring web content.",
+      longReason: "At the time of this project, I have had extensive experience in responsive web application development using HTML from school projects and hackathons. The foundational bread and butter of app development in my eyes."
     },
   ]
-  
+
   return (
     <Card className="w-full max-w-5xl mx-auto overflow-hidden border-none shadow-none">
       <CardContent className="p-0 mt-4">
@@ -40,7 +46,8 @@ export default function Project3() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-8 flex flex-col justify-center">
             <h1 className="text-4xl font-bold tracking-tight mb-4">Project Title</h1>
-            <p className="text-xl text-muted-foreground">Responsive web design. Backend API calls for emails and PDF rendering.</p>
+            <p className="text-xl text-muted-foreground mb-4">Responsive web design. Backend API calls for emails and PDF rendering.</p>
+            <p className="text-reg text-muted-foreground mb-4">March 1 2024</p>
           </div>
           <div className="relative aspect-video md:aspect-square rounded-lg overflow-hidden">
             <Image
@@ -64,11 +71,12 @@ export default function Project3() {
             lacus a sapien blandit viverra. Integer faucibus Lorem ipsum dolor
             sit amet, consectetur adipiscing elit.
           </p>
-
+          
+          
           {/* Tech Stack */}
           <h3 className="text-2xl font-semibold mb-2 text-center">Tech Stack</h3>
           <p className="text-sm text-center text-muted-foreground mb-8">
-            Hover over each icon to learn more about the technologies used.
+            Click an icon to learn more about the technologies used.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
             {techStack.map((tech, index) => (
@@ -81,15 +89,15 @@ export default function Project3() {
             <div className="flex-1 flex flex-col justify-between">
               <h3 className="text-2xl font-semibold mb-4">Long Description with Photo</h3>
               <p className="text-lg text-muted-foreground">
-                Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
-                libero nec interdum cursus, justo sem facilisis magna, eu varius 
-                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
-                vitae nisi cursus hendrerit. Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
-                libero nec interdum cursus, justo sem facilisis magna, eu varius 
-                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
-                vitae nisi cursus hendrerit. Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
-                libero nec interdum cursus, justo sem facilisis magna, eu varius 
-                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
+                Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet,
+                libero nec interdum cursus, justo sem facilisis magna, eu varius
+                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi
+                vitae nisi cursus hendrerit. Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet,
+                libero nec interdum cursus, justo sem facilisis magna, eu varius
+                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi
+                vitae nisi cursus hendrerit. Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet,
+                libero nec interdum cursus, justo sem facilisis magna, eu varius
+                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi
                 vitae nisi cursus hendrerit.
               </p>
             </div>
@@ -120,12 +128,12 @@ export default function Project3() {
               </p>
             </div>
             <p className="text-lg text-muted-foreground mt-6 max-w-5xl mx-auto text-left">
-              Aliquam erat volutpat. Suspendisse potenti. Donec aliquet sapien vel 
-              tellus suscipit, eu dapibus ipsum bibendum. Phasellus vulputate, arcu 
-              ac vehicula pharetra, arcu orci aliquet lectus. Aliquam erat volutpat. Suspendisse potenti. Donec aliquet sapien vel 
-              tellus suscipit, eu dapibus ipsum bibendum. Phasellus vulputate, arcu 
-              ac vehicula pharetra, arcu orci aliquet lectus. Aliquam erat volutpat. Suspendisse potenti. Donec aliquet sapien vel 
-              tellus suscipit, eu dapibus ipsum bibendum. Phasellus vulputate, arcu 
+              Aliquam erat volutpat. Suspendisse potenti. Donec aliquet sapien vel
+              tellus suscipit, eu dapibus ipsum bibendum. Phasellus vulputate, arcu
+              ac vehicula pharetra, arcu orci aliquet lectus. Aliquam erat volutpat. Suspendisse potenti. Donec aliquet sapien vel
+              tellus suscipit, eu dapibus ipsum bibendum. Phasellus vulputate, arcu
+              ac vehicula pharetra, arcu orci aliquet lectus. Aliquam erat volutpat. Suspendisse potenti. Donec aliquet sapien vel
+              tellus suscipit, eu dapibus ipsum bibendum. Phasellus vulputate, arcu
               ac vehicula pharetra, arcu orci aliquet lectus.
             </p>
           </div>

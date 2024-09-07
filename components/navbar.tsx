@@ -15,6 +15,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Resume', href: '/resume' },

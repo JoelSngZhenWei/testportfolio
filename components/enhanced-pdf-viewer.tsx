@@ -20,13 +20,13 @@ export function EnhancedPdfViewer() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <Card className="w-full max-w-6xl shadow-lg">
-        {/* <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-2xl font-bold">Resume</CardTitle>
           <Button variant="outline" size="icon" onClick={handleDownload}>
             <Download className="h-4 w-4" />
             <span className="sr-only">Download PDF</span>
           </Button>
-        </CardHeader> */}
+        </CardHeader>
         <CardContent className="p-3">
           {isLoading ? (
             <div className="flex justify-center items-center h-[80vh]">
