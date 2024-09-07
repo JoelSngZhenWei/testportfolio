@@ -178,7 +178,9 @@ export function EmailForm() {
                 Failed to Send Email
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Oops! Something went wrong. Please try again later or contact manually via your email client.
+                Oops! Something went wrong. 
+                <br />
+                Please try again later or contact manually via your email client.
               </p>
               <Button
                 onClick={closeModal}

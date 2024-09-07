@@ -2,11 +2,40 @@
 
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { TechStackItem } from "@/components/components-tech-stack-item"
 
 export default function Project3() {
+  const techStack = [
+    { 
+      src: "/techstack/nextjs.png", 
+      alt: "Next.js",
+      reason: "Used for server-side rendering and optimized performance."
+    },
+    { 
+      src: "/techstack/reactjs.png", 
+      alt: "React.js",
+      reason: "Chosen for its component-based architecture and efficient UI updates."
+    },
+    { 
+      src: "/techstack/tailwindcss.png", 
+      alt: "Tailwind CSS",
+      reason: "Utilized for rapid UI development and consistent styling."
+    },
+    { 
+      src: "/techstack/vercel.png", 
+      alt: "Vercel",
+      reason: "Selected for seamless deployment and excellent Next.js integration."
+    },
+    { 
+      src: "/techstack/html5.png", 
+      alt: "HTML5",
+      reason: "Used as the foundation for structuring web content."
+    },
+  ]
+  
   return (
     <Card className="w-full max-w-5xl mx-auto overflow-hidden border-none shadow-none">
-      <CardContent className="p-0">
+      <CardContent className="p-0 mt-4">
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-8 flex flex-col justify-center">
@@ -16,7 +45,7 @@ export default function Project3() {
           <div className="relative aspect-video md:aspect-square rounded-lg overflow-hidden">
             <Image
               src="/loki.jpg"
-              alt="hello"
+              alt="Main Image"
               fill
               className="object-cover"
             />
@@ -37,26 +66,13 @@ export default function Project3() {
           </p>
 
           {/* Tech Stack */}
-          <h3 className="text-2xl font-semibold mb-8 text-center">Tech Stack</h3>
+          <h3 className="text-2xl font-semibold mb-2 text-center">Tech Stack</h3>
+          <p className="text-sm text-center text-muted-foreground mb-8">
+            Hover over each icon to learn more about the technologies used.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
-            {[
-              { src: "/techstack/nextjs.png", alt: "Next.js" },
-              { src: "/techstack/reactjs.png", alt: "React.js" },
-              { src: "/techstack/tailwindcss.png", alt: "Tailwind CSS" },
-              { src: "/techstack/vercel.png", alt: "Vercel" },
-              { src: "/techstack/html5.png", alt: "HTML5" },
-            ].map((tech, index) => (
-              <div key={index} className="flex flex-col items-center group">
-                <div className="relative w-20 h-20 mb-2 transition-transform duration-300 ease-in-out transform group-hover:scale-110">
-                  <Image
-                    src={tech.src}
-                    alt={tech.alt}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-sm font-medium">{tech.alt}</p>
-              </div>
+            {techStack.map((tech, index) => (
+              <TechStackItem key={index} {...tech} />
             ))}
           </div>
 
@@ -68,13 +84,10 @@ export default function Project3() {
                 Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
                 libero nec interdum cursus, justo sem facilisis magna, eu varius 
                 dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
-                vitae nisi cursus hendrerit.Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
+                vitae nisi cursus hendrerit. Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
                 libero nec interdum cursus, justo sem facilisis magna, eu varius 
                 dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
-                vitae nisi cursus hendrerit.Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
-                libero nec interdum cursus, justo sem facilisis magna, eu varius 
-                dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
-                vitae nisi cursus hendrerit.Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
+                vitae nisi cursus hendrerit. Donec nec justo sed arcu lacinia facilisis. Phasellus imperdiet, 
                 libero nec interdum cursus, justo sem facilisis magna, eu varius 
                 dolor arcu in erat. Mauris ut massa felis. Curabitur sit amet nisi 
                 vitae nisi cursus hendrerit.
@@ -116,8 +129,6 @@ export default function Project3() {
               ac vehicula pharetra, arcu orci aliquet lectus.
             </p>
           </div>
-
-          
         </div>
       </CardContent>
     </Card>

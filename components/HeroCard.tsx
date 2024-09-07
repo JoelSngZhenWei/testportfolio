@@ -41,6 +41,8 @@ export function HeroCard() {
             </a>
             <a
               href="https://www.linkedin.com/in/joelsngzw/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-full text-lg font-semibold transition duration-300 ease-in-out"
             >
               LinkedIn

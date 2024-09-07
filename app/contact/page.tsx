@@ -12,9 +12,6 @@ export default function Contact() {
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-xl px-4 sm:px-8 py-12">
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">
-          Contact Me
-        </h1>
         <EmailForm />
       </div>
     </div>
