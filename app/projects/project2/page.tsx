@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import TechStackItem from '@/components/tech-stack-item';
 import { Lightbox } from '@/components/lightbox';
 
-export default function Project3() {
+export default function Project2() {
   const techStack = [
     {
       src: '/techstack/nextjs.svg',
@@ -55,7 +54,7 @@ export default function Project3() {
             <p className="text-reg text-muted-foreground mb-4">March 1 2024</p>
           </div>
           {/* Main Image */}
-          <div className="relative aspect-video md:aspect-square rounded-lg overflow-hidden">
+          <div className="relative aspect-square rounded-lg">
             <Lightbox src="/loki.jpg" alt="Main Image" width={800} height={600} />
           </div>
         </div>
@@ -96,10 +95,8 @@ export default function Project3() {
               </p>
             </div>
             {/* Description Photo */}
-            <div className="relative w-full md:w-1/2 max-w-[50%]">
-              <div className="relative w-full h-full max-h-[calc(100vh-6rem)]">
+            <div className="relative w-full md:w-1/2 ">
                 <Lightbox src="/loki.jpg" alt="Description photo" width={800} height={600} />
-              </div>
             </div>
           </div>
 
