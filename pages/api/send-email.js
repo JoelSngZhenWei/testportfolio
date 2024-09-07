@@ -17,8 +17,8 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: email,
       to: 'joelsngzw@gmail.com',
-      subject: `${subject} - Message from ${name}`,
-      text: `You have received a new message via your portfolio website.\nFrom: ${name} (\nEmail: ${email}):\n\n${message}`,
+      subject: `${subject} - Website Message from ${name}`,
+      text: `You have received a new message via your portfolio website.\nFrom: ${name} (\nEmail: ${email})\nSubject: ${subject}\n\n${message}`,
     };
 
     try {
