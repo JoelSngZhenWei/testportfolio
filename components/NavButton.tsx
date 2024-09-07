@@ -9,7 +9,11 @@ interface NavButtonProps {
 
 export default function NavButton({ href, label }: NavButtonProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname
+    ? href === "/"
+      ? pathname === href // If href is '/', check for exact match
+      : pathname.startsWith(href) // Otherwise, check if pathname starts with href
+    : false;
 
   return (
     <a

@@ -13,7 +13,7 @@ interface TechStackItemProps {
   longReason: string
 }
 
-export function TechStackItem({ src, alt, reason, longReason }: TechStackItemProps) {
+export default function TechStackItem({ src, alt, reason, longReason }: TechStackItemProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -48,7 +48,7 @@ export function TechStackItem({ src, alt, reason, longReason }: TechStackItemPro
                       {alt}
                     </Dialog.Title>
                   </div>
-                  <div className="mt-4 text-gray-700 leading-relaxed">
+                  <div className="mt-4 text-gray-700 leading-relaxed whitespace-pre-wrap">
                     {longReason}
                   </div>
                   <Dialog.Close asChild>
