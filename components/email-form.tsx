@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Send } from "lucide-react"
+import { Send, CheckCircle, XCircle } from "lucide-react"
 
 export function EmailForm() {
   const [formData, setFormData] = useState({
@@ -80,10 +80,10 @@ export function EmailForm() {
 
   return (
     <div className="w-full max-w-lg mx-auto">
-      <Card className="bg-white dark:bg-white">
+      <Card className="bg-white dark:bg-gray-800">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">Contact Me</CardTitle>
-          <CardDescription className="text-center font-bold" style={{ color: '#D10000' }}>joelsngzw@gmail.com</CardDescription>
+          <CardDescription className="text-center font-bold text-red-600">joelsngzw@gmail.com</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -147,34 +147,46 @@ export function EmailForm() {
 
       {/* Success Modal */}
       {showSuccessModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-colors duration-500 ease-in-out">
-            <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
-              Email Sent Successfully!
-            </h2>
-            <Button
-              onClick={closeModal}
-              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 transition-colors duration-500 ease-in-out"
-            >
-              Close
-            </Button>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-sm w-full mx-4 transform transition-all duration-300 ease-in-out scale-100">
+            <div className="text-center">
+              <CheckCircle className="mx-auto h-16 w-16 text-green-500 mb-4" />
+              <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                Email Sent Successfully!
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Your message has been sent to Joel Sng. 
+              </p>
+              <Button
+                onClick={closeModal}
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Close
+              </Button>
+            </div>
           </div>
         </div>
       )}
 
       {/* Error Modal */}
       {showErrorModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-colors duration-500 ease-in-out">
-            <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">
-              Failed to Send Email.
-            </h2>
-            <Button
-              onClick={closeModal}
-              className="bg-highlightRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-red-600 dark:bg-red-500 transition-colors duration-500 ease-in-out"
-            >
-              Close
-            </Button>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-sm w-full mx-4 transform transition-all duration-300 ease-in-out scale-100">
+            <div className="text-center">
+              <XCircle className="mx-auto h-16 w-16 text-red-500 mb-4" />
+              <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                Failed to Send Email
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Oops! Something went wrong. Please try again later or contact manually via your email client.
+              </p>
+              <Button
+                onClick={closeModal}
+                className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Close
+              </Button>
+            </div>
           </div>
         </div>
       )}
