@@ -30,6 +30,7 @@
     "react-dom": "^18",
     "react-medium-image-zoom": "^5.2.9",
     "react-pdf": "^9.1.0",
+    "react-syntax-highlighter": "^15.5.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "yet-another-react-lightbox": "^3.21.4"
@@ -38,6 +39,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "postcss": "^8",

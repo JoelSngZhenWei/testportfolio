@@ -46,7 +46,7 @@ export default function Home() {
             lacus a sapien blandit viverra. Integer faucibus libero vitae nulla
             venenatis, non viverra massa suscipit...
           </p>
-          <div className="flex justify-end">
+          <div className="flex justify-end mt-2">
             <Link href="/projects/project1">
               <ReadMoreButton />
             </Link>
@@ -94,7 +94,7 @@ export default function Home() {
             Double degree student, fitness junkie, dog owner, and community
             service advocate. I am adding more text here to pad this out. Hello there!
           </p>
-          <div className="flex justify-end">
+          <div className="flex justify-end mt-2">
             <Link href="/about">
               <ReadMoreButton />
             </Link>
