@@ -4,7 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import ParticlesBackground from "@/components/ParticlesBackground";
-
+import { FooterComponent } from "@/components/footer-component"; // Updated import
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
     <html lang="en">
       <head>
         <link rel="preload" href="/particles.min.js" as="script"></link>
@@ -53,6 +52,8 @@ export default function RootLayout({
           <ParticlesBackground />
         </div>
 
+        {/* Include FooterComponent here */}
+        <FooterComponent />
       </body>
     </html>
   );

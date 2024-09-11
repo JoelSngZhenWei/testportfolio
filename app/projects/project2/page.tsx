@@ -5,7 +5,7 @@ import { Lightbox } from '@/components/lightbox';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Import a Prism theme
 
-export default function Project2() {
+export default function SPM() {
 
   const sampleCode1 = `function greet(name) {
   return \`Hello, \${name}!\`;

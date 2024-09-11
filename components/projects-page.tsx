@@ -10,6 +10,14 @@ import { ReadMoreButton } from './read-more-button'
 const projects = [
   {
     imageSrc: '/project1.jpg',
+    date: 'Aug 19, 2024',
+    title: 'HRMS Application',
+    description: 'A HRMS designed to allow employees to apply for WFH/in-office working arrangements on desired dates, view team arrangements, and for team-leads to manage applications by subordinates.',
+    link: '/projects/spm',
+    categories: ['Software Engineering']
+  },
+  {
+    imageSrc: '/project1.jpg',
     date: 'March 1, 2024',
     title: 'Project One',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id lacus a sapien blandit viverra. Integer faucibus...',
