@@ -12,7 +12,7 @@ const projects = [
     imageSrc: '/ocbc.png',
     date: 'August 26, 2024',
     title: 'Financial Chatbot',
-    description: 'An AI Chatbot to recommend different accounts, products, and investments to reach specific financial goals.',
+    description: 'AI Chatbot to recommend different accounts, products, and investments to reach specific financial goals. Developed with OCBC Singapore.',
     link: '/projects/ocbc',
     categories: ['AI' , 'Software Engineering']
   }
@@ -126,7 +126,7 @@ export function ProjectsPage() {
                   </p>
                   <Link href={project.link} className="mt-2 block">
                     <p className="text-xl font-semibold text-primary">{project.title}</p>
-                    <p className="mt-2 text-base text-card-foreground line-clamp-3">{project.description}</p>
+                    <p className="mt-2 text-base text-card-foreground line-clamp-4">{project.description}</p>
                   </Link>
                 </div>
 

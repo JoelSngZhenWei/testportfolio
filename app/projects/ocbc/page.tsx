@@ -86,9 +86,11 @@ print(response.text)`;
 
                 <h2 className="text-3xl font-semibold mb-3">Problem Statement:</h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                    OCBC was facing the issue of not having enough reach with PMETs (persons with 2-10 years of working experience). In our primary research, me and my peers identified that there were customers willing to switch for better benefits, which OCBC provided, but they chose not to because of convenience.
+                    OCBC was facing the issue of not having enough reach with PMETs (persons with 2-10 years of working experience). They engaged my University to understand if there were possible opportunities in this demographic. 
                     <br /><br />
-                    While this was my business capstone project, I chose to leverage my competitive advantage as an information systems student to drive a technology solution to this business problem.
+                    In our primary research, me and my peers identified that there were customers willing to switch for better benefits, which OCBC provided, but they chose not to because of inconvenience.
+                    <br /><br />
+                    While this was my business capstone project, I chose to leverage my competitive advantage as an Information Systems student to drive a technology solution to this business problem.
                 </p>
                 <h2 className="text-3xl font-semibold mb-3">Our Solution:</h2>
                 <p className="text-lg text-muted-foreground mb-4">
