@@ -41,6 +41,7 @@ console.log(greet('World'));`;
             </SyntaxHighlighter>
           </div>
         </div>
+        
       </CardContent>
     </Card>
   );

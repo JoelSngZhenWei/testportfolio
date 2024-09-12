@@ -61,7 +61,7 @@ export default function Project3() {
 
           {/* Programming Languages */}
           <h3 className="text-2xl font-semibold mb-4 text-center">Programming Languages</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
+          <div className="flex flex-wrap justify-center gap-24 mb-16">
             {programmingLanguages.map((tech, index) => (
               <TechStackItem key={index} {...tech} />
             ))}
@@ -69,7 +69,7 @@ export default function Project3() {
 
           {/* Frameworks */}
           <h3 className="text-2xl font-semibold mb-4 text-center">Frameworks</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
+          <div className="flex flex-wrap justify-center gap-24 mb-16">
             {frameworks.map((tech, index) => (
               <TechStackItem key={index} {...tech} />
             ))}
@@ -77,7 +77,7 @@ export default function Project3() {
 
           {/* Databases */}
           <h3 className="text-2xl font-semibold mb-4 text-center">Databases</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
+          <div className="flex flex-wrap justify-center gap-24 mb-16">
             {databases.map((tech, index) => (
               <TechStackItem key={index} {...tech} />
             ))}
@@ -85,7 +85,7 @@ export default function Project3() {
 
           {/* Front-end and Back-end Tools */}
           <h3 className="text-2xl font-semibold mb-4 text-center">Additional Tools</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
+          <div className="flex flex-wrap justify-center gap-24 mb-16">
             {tools.map((tech, index) => (
               <TechStackItem key={index} {...tech} />
             ))}
@@ -93,7 +93,7 @@ export default function Project3() {
 
           {/* APIs */}
           <h3 className="text-2xl font-semibold mb-4 text-center">APIs</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center mb-16">
+          <div className="flex flex-wrap justify-center gap-24 mb-16">
             {apis.map((tech, index) => (
               <TechStackItem key={index} {...tech} />
             ))}

@@ -9,12 +9,28 @@ import { ReadMoreButton } from './read-more-button'
 
 const projects = [
   {
-    imageSrc: '/project1.jpg',
+    imageSrc: '/ocbc.png',
+    date: 'August 26, 2024',
+    title: 'Financial Chatbot',
+    description: 'An AI Chatbot to recommend different accounts, products, and investments to reach specific financial goals.',
+    link: '/projects/ocbc',
+    categories: ['AI' , 'Software Engineering']
+  }
+  ,{
+    imageSrc: '/optionpricing.png',
     date: 'Aug 19, 2024',
-    title: 'HRMS Application',
-    description: 'A HRMS designed to allow employees to apply for WFH/in-office working arrangements on desired dates, view team arrangements, and for team-leads to manage applications by subordinates.',
+    title: 'Options Pricing using Machine Learning',
+    description: 'Predicting option prices using historical market data and visualisation of ML models.',
     link: '/projects/spm',
-    categories: ['Software Engineering']
+    categories: ['Machine Learning', 'Data Visualisation']
+  },
+  {
+    imageSrc: '/project1.jpg',
+    date: 'May 11, 2024',
+    title: 'Neuron Activity Mapping using Machine Learning',
+    description: 'Analysing neruon data while performing simple actions. Managing high dimensionality with ICA and ML algos.',
+    link: '/projects/ocbc',
+    categories: ['Machine Learning' , 'Data Visualisation']
   },
   {
     imageSrc: '/project1.jpg',
@@ -54,7 +70,7 @@ export function ProjectsPage() {
   return (
     <div className="bg-background min-h-screen flex flex-col">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-grow">
-        <div className="text-center mb-6">
+        <div className="text-center mb-3">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Projects</h2>
         </div>
 
@@ -96,7 +112,7 @@ export function ProjectsPage() {
             >
               <div className="flex-shrink-0">
                 <Image
-                  className="h-48 w-full object-cover"
+                  className="h-48 w-full object-contain"
                   src={project.imageSrc}
                   alt={project.title}
                   width={400}
