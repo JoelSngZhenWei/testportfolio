@@ -12,7 +12,7 @@ export function FooterComponent() {
       <div className="container mx-auto px-6">
         <div className="flex justify-center space-x-20">
           <a href="/contact" className="hover:text-highlightRed"><Mail /></a>
-          <a href="https://www.linkedin.com/in/joelsngzw/" className="hover:text-highlightRed"><Linkedin /></a>
+          <a href="https://www.linkedin.com/in/joelsngzw/" target="_blank" className="hover:text-highlightRed"><Linkedin /></a>
         </div>
       </div>
     </footer>
