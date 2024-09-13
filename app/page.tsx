@@ -39,10 +39,10 @@ export default function Home() {
       <section className="w-full max-w-screen-lg px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Column - Text */}
         <div className="flex flex-col justify-center">
-          <h2 className=" text-3xl font-bold mb-2 text-black dark:text-white">
+          <h2 className=" text-3xl font-bold mb-2 text-black">
             Neural Activity Visualisation with PCA
           </h2>
-          <p className="text-gray-700 text-xl dark:text-gray-300">
+          <p className="text-gray-700 text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
             lacus a sapien blandit viverra. Integer faucibus libero vitae nulla
             venenatis, non viverra massa suscipit...
@@ -62,7 +62,7 @@ export default function Home() {
               alt="Featured Project"
               layout="fill"
               objectFit="cover"
-              className="cursor-pointer rounded-lg"
+              className="cursor-pointer rounded-lg border bg-white hover:scale-[1.02] duration-300"
             />
           </Link>
         </div>
@@ -79,9 +79,9 @@ export default function Home() {
             <Image
               src="/me.jpg"
               alt="More About Me"
-              layout="fill"
+              layout = "fill"
               objectFit="cover"
-              className="cursor-pointer rounded-lg"
+              className="cursor-pointer rounded-lg border bg-white hover:scale-[1.02] duration-300"
             />
           </Link>
         </div>

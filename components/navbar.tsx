@@ -36,13 +36,13 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-10">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold text-primary">
+            <Link href="/" className="text-xl font-bold text-primary hover-special">
               JOEL SNG
             </Link>
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-4 overflow-hidden text-sm">
+          <div className="hidden md:flex items-center space-x-4 overflow-hidden text-sm hover:none">
             {navItems.map((item) => (
               <NavButton
                 key={item.name}

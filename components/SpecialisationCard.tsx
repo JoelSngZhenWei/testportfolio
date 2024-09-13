@@ -17,8 +17,8 @@ export default function SpecialisationCard({
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center w-full max-w-xs mx-auto p-6 bg-gradient-to-br transition-all duration-300 ease-in-out"
-      whileHover={{ scale: 1.05 }}
+      className="flex flex-col items-center justify-center w-full max-w-xs mx-auto p-6 bg-gradient-to-br transition-all duration-200 ease-in-out"
+      whileHover={{ scale: 1.02 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >

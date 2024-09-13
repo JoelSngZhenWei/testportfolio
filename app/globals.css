@@ -31,6 +31,10 @@ nav a:hover {
   color: rgb(var(--highlight-red)); /* HighlightRed for hovered text */
 }
 
+nav a.hover-special:hover {
+  color: rgb(0,0,0); /* HighlightBlack for special hovered text */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -19,7 +19,7 @@ export default function NavButton({ href, label }: NavButtonProps) {
     <a
       href={href}
       className={`block py-2 pr-4 pl-3 
-        ${isActive ? "text-highlightRed font-semibold" : "text-gray-500 dark:text-gray-400"}`}
+        ${isActive ? "text-highlightRed font-semibold" : "text-gray-500"}`}
     >
       {label}
     </a>
