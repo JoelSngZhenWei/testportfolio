@@ -4,13 +4,9 @@ import Image from "next/image"
 import { useTheme } from "@/contexts/ThemeContext" // Import the useTheme hook
 
 export function HeroCard() {
-  const { isDarkMode } = useTheme(); // Access the dark mode state
-
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-      </div>
-      <div className="z-10 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4 py-4">
+    <div className="relative h-max flex items-center justify-center my-10">
+      <div className="z-10 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4">
         <div className="relative md:w-1/2 mb-8 md:mb-0">
           <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
             <Image
@@ -18,18 +14,18 @@ export function HeroCard() {
               alt="Joel Sng"
               layout="fill"
               objectFit="cover"
-              className="rounded-full shadow-2xl"
+              className="rounded-full shadow-2xl z-20"
             />
           </div>
         </div>
         <div className="md:w-1/2 text-center md:text-left md:pl-8">
-          <h1 className={`text-4xl md:text-6xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          <h1 className={`text-4xl md:text-6xl font-bold mb-4 text-white}`}>
             Joel Sng
           </h1>
-          <p className={`text-xl md:text-2xl mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            Hello! I am an aspiring data professional with experience in machine learning and data visualization.
+          <p className={`text-xl md:text-2xl mb-6 text-gray-300}`}>
+            Hello! I am an aspiring data professional and double degree undergraduate at SMU.
           </p>
-          <p className={`text-lg md:text-xl ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+          <p className={`text-lg md:text-xl text-gray-400}`}>
             I will be graduating in December 2025.
           </p>
           <div className="mt-8">

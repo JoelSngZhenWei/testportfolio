@@ -4,11 +4,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BookOpen, Briefcase, GraduationCap, Heart, Palmtree, Users } from "lucide-react"
-import LineDivider from "./LineDivider"
+
 
 export function AboutMe() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8" id="About Me">
       <Card className="max-w-5xl mx-auto">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">

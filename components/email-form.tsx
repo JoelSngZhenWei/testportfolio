@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, CheckCircle, XCircle } from "lucide-react"
+import { EmailCopyButton } from './email-copy-button'
 
 export function EmailForm() {
   const [formData, setFormData] = useState({
@@ -83,7 +84,9 @@ export function EmailForm() {
       <Card className="bg-white dark:bg-gray-800">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">Contact Me</CardTitle>
-          <CardDescription className="text-center font-bold text-red-600">joelsngzw@gmail.com</CardDescription>
+          <CardDescription className="text-center font-bold text-red-600">
+            <EmailCopyButton />
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <form onSubmit={handleSubmit} className="space-y-4">
