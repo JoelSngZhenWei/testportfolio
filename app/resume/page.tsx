@@ -1,10 +1,14 @@
-"use client";
 import { EnhancedPdfViewer } from "@/components/enhanced-pdf-viewer";
-import ParticlesBackground from "@/components/ParticlesBackground";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:"Resume",
+  description: "View Joel Sng's Resume"
+}
 
 export default function Resume() {
   return (
-    <div className="bg-white dark:bg-black min-h-screen">
+    <div className="bg-white min-h-screen">
       <EnhancedPdfViewer />
     </div>
     

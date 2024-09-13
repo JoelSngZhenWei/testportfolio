@@ -1,11 +1,14 @@
-"use client";
-import Link from "next/link";
 import { ProjectsPage } from "@/components/projects-page";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Projects by Joel Sng"
+}
 
 export default function Projects() {
   return (
-    <div className="min-h-screen py-2 bg-white dark:bg-black transition-colors duration-500">
+    <div className="min-h-screen py-2 bg-white">
       <ProjectsPage/>
     </div>
   );

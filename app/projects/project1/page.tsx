@@ -1,9 +1,12 @@
-'use client';
-
 import { Card, CardContent } from '@/components/ui/card';
 import TechStackItem from '@/components/tech-stack-item';
 import { Lightbox } from '@/components/lightbox';
+import { Metadata } from 'next';
 
+export const metadata: Metadata={
+  title:"Project1",
+  description:"Project 1"
+};
 export default function Project1() {
   const techStack = [
     {

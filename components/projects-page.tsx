@@ -68,7 +68,7 @@ export function ProjectsPage() {
     : projects.filter(project => project.categories.includes(filter))
 
   return (
-    <div className="bg-background min-h-screen flex flex-col">
+    <div className="bg-background min-h-screen flex flex-col mb-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-grow">
         <div className="text-center mb-3">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Projects</h2>
@@ -108,7 +108,7 @@ export function ProjectsPage() {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-card/90"
+              className="flex flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-card/90 border"
             >
               <div className="flex-shrink-0">
                 <Image

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Download, Loader2 } from "lucide-react"
+import ParticlesBackground from './ParticlesBackground'
 
 export function EnhancedPdfViewer() {
   const [isLoading, setIsLoading] = useState(true)
@@ -19,7 +20,10 @@ export function EnhancedPdfViewer() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Card className="w-full max-w-6xl shadow-lg">
+      <div className="absolute inset-0">
+        <ParticlesBackground />
+      </div>
+      <Card className="w-full max-w-6xl shadow-lg z-10">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-2xl font-bold">Resume</CardTitle>
           <Button variant="outline" size="icon" onClick={handleDownload}>

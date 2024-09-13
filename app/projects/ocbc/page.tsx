@@ -1,5 +1,3 @@
-'use client';
-
 import { Card, CardContent } from '@/components/ui/card';
 import TechStackItem from '@/components/tech-stack-item';
 import { Lightbox } from '@/components/lightbox';
@@ -7,6 +5,12 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Import a Prism theme
 import { TryAppButton } from '@/components/try-app-button';
 import { GithubButton } from '@/components/github-button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title:"AI Financial Assistant",
+    description: "An AI Financial Assistant Chatbot I developed as a project for OCBC."
+}
 
 export default function Project3() {
     // Separate tech stack items into categories

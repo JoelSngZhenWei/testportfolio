@@ -11,19 +11,6 @@
   --highlight-red: 220, 38, 38; /* Update with your highlightRed color */
 }
 
-/* Dark theme colors */
-:root.dark {
-  --foreground-rgb: 209, 213, 219; /* Light gray text */
-  --background-start-rgb: 0, 0, 0; /* Black background */
-  --background-end-rgb: 26, 26, 26; /* Slightly lighter black */
-}
-
-/* Apply text and background color with gradient */
-body {
-  @apply transition-colors duration-500 ease-in-out;
-  transition: background 1s ease, color 1s ease;
-}
-
 /* Utility class for text balance */
 @layer utilities {
   .text-balance {
@@ -38,42 +25,6 @@ body {
 
 .glow-effect:hover {
   filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1)); /* Strong red glow */
-}
-
-/* Spin Effects for Navbar */
-@keyframes spin-accelerate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg); /* Full rotation at halfway */
-  }
-  100% {
-    transform: rotate(720deg); /* Double rotation at the end */
-  }
-}
-
-@keyframes spin-decelerate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg); /* Slower rotation */
-  }
-}
-
-.animate-spin-accelerate {
-  animation: spin-accelerate 0.5s ease-in;
-}
-
-.animate-spin-decelerate {
-  animation: spin-decelerate 0.5s ease-out;
-}
-
-/* Navbar Dark Mode Styling */
-nav.dark {
-  background-color: rgb(var(--background-start-rgb)); /* Black background */
-  color: rgb(var(--foreground-rgb)); /* Grey font */
 }
 
 nav a:hover {
@@ -107,32 +58,6 @@ nav a:hover {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-  }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
   }
 }
 

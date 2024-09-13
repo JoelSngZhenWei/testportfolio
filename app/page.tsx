@@ -17,7 +17,8 @@ export default function Home() {
   };
 
   return (
-    <main className="relative flex flex-col items-center justify-center min-h-screen w-full px-6 overflow-hidden bg-white dark:bg-black transition-colors duration-500">
+    <main className="relative flex flex-col items-center justify-center min-h-screen w-full px-6 overflow-hidden bg-white">
+
 
       {/* Particles Background */}
       <ParticlesBackground />
