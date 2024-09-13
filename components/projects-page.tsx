@@ -11,8 +11,8 @@ const projects = [
   {
     imageSrc: '/ocbc.png',
     date: 'August 26, 2024',
-    title: 'Financial Chatbot',
-    description: 'AI Chatbot to recommend different accounts, products, and investments to reach specific financial goals. Developed with OCBC Singapore.',
+    title: 'AI Financial Chatbot',
+    description: 'AI Assistant to recommend different accounts, products, and investments to reach specific financial goals. Developed with OCBC Singapore.',
     link: '/projects/ocbc',
     categories: ['AI' , 'Software Engineering']
   }
