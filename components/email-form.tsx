@@ -85,7 +85,9 @@ export function EmailForm() {
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">Contact Me</CardTitle>
           <CardDescription className="text-center font-bold text-red-600">
+
             <EmailCopyButton />
+
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -158,7 +160,7 @@ export function EmailForm() {
                 Email Sent Successfully!
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Your message has been sent to Joel Sng. 
+                Your message has been sent to Joel Sng.
               </p>
               <Button
                 onClick={closeModal}
@@ -181,7 +183,7 @@ export function EmailForm() {
                 Failed to Send Email
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Oops! Something went wrong. 
+                Oops! Something went wrong.
                 <br />
                 Please try again later or contact manually via your email client.
               </p>

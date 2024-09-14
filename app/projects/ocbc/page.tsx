@@ -24,7 +24,7 @@ export default function Project3() {
     const frameworks = [
         { src: '/techstack/nextjs.svg', alt: 'Next.js', reason: 'Server-side rendering and optimized performance.', longReason: 'LD1' },
         { src: '/techstack/tailwindcss.png', alt: 'Tailwind CSS', reason: 'Rapid UI development and consistent styling.', longReason: 'LD3' },
-        // Add more frameworks as needed
+        { src: '/techstack/flask.png', alt: 'Flask', reason: 'Lightweight web framework for building web apps and APIs in Python.', longReason: 'LD2' },
     ];
 
     const tools = [

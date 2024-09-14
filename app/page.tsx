@@ -55,7 +55,7 @@ export default function Home() {
               alt="Featured Project"
               layout="fill"
               objectFit="cover"
-              className="cursor-pointer rounded-lg border bg-white hover:scale-[1.02] duration-300"
+              className="cursor-pointer rounded-lg border bg-white hover:scale-[1.02] duration-300 shadow-md hover:shadow-lg"
             />
           </Link>
         </div>
@@ -65,16 +65,16 @@ export default function Home() {
       <LineDivider text="More About Me" />
 
       {/* More About Me Section */}
-      <section className="w-full max-w-screen-lg px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 z-0 rounded-3xl">
+      <section className="w-full max-w-screen-lg px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 z-0 rounded-3xl ">
         {/* Left Column - Image */}
-        <div className="relative w-full h-64">
+        <div className="relative w-full h-64 ">
           <Link href="/about">
             <Image
               src="/me.jpg"
               alt="More About Me"
               layout="fill"
               objectFit="cover"
-              className="cursor-pointer rounded-lg border bg-white hover:scale-[1.02] duration-300"
+              className="cursor-pointer rounded-lg border bg-white hover:scale-[1.02] duration-300 shadow-md hover:shadow-lg"
             />
           </Link>
         </div>

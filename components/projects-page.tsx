@@ -71,7 +71,7 @@ export function ProjectsPage() {
     <div className="bg-background min-h-screen flex flex-col mb-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-grow">
         <div className="text-center my-4">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Projects</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-primary sm:text-2xl">Projects</h2>
         </div>
 
         {/* Mobile dropdown filter */}
@@ -110,7 +110,7 @@ export function ProjectsPage() {
               key={index}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-card/90 border"
             >
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 p-2">
                 <Image
                   className="h-48 w-full object-contain"
                   src={project.imageSrc}

@@ -26,7 +26,7 @@ export function ReadMoreButton() {
       <span 
         className={`
           absolute inset-0 bg-[#D10000] 
-          transition-all duration-300 ease-in-out
+          transition-all duration-200 ease-in-out
           ${isHovered ? 'scale-x-100' : 'scale-x-0'}
         `}
         style={{ transformOrigin: 'left' }}
